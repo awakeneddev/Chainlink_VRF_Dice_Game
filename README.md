@@ -3,6 +3,9 @@
 
 This is a **decentralized dice rolling game** built on **Ethereum**, ensuring **provable randomness** using **Chainlink VRF (Verifiable Random Function)**. The project includes a Solidity smart contract deployed with **Hardhat**, and a React-based frontend powered by **Ethers.js** for seamless interaction.
 
+
+![image](https://github.com/user-attachments/assets/c4693ad1-8530-4a84-ad74-059ef4a8ec80)
+
 ## 🚀 Features
 ✅ **Fair & Transparent** - Uses Chainlink VRF for **provably random dice rolls**  
 ✅ **Decentralized** - Runs on **Ethereum blockchain**  
