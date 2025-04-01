@@ -39,12 +39,24 @@ const DiceGame = () => {
       const provider = new ethers.BrowserProvider(window.ethereum);
       await provider.send("eth_requestAccounts", []);
       const signer = await provider.getSigner();
-      const contract = new ethers.Contract(import.meta.env.VITE_CONTRACT_ADDRESS, ABI, signer);
       
-      const tx = await contract.rollDice();
+      // Add gas limit override
+      const contract = new ethers.Contract(
+        import.meta.env.VITE_CONTRACT_ADDRESS, 
+        ABI, 
+        signer
+      );
+      
+      const tx = await contract.rollDice({
+        gasLimit: 500000 // Manually set gas limit
+      });
+      
       await tx.wait();
     } catch (err) {
-      console.error("Error rolling dice:", err);
+      console.error("Full error object:", err);
+      if (err.data) {
+        console.log("Raw error data:", err.data);
+      }
       setIsLanding(false);
       setLoading(false);
     }
