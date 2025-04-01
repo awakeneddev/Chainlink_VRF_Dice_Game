@@ -60,11 +60,15 @@ event DiceLanded(uint256 indexed requestId, address indexed player, uint256 inde
 3. **Set Up Environment Variables**
    Create a `.env` file in the root directory and add:
 
-   ```sh
-   SUBSCRIPTION_ID=your_chainlink_subscription_id
-   VRF_COORDINATOR=your_vrf_coordinator_address
-   KEY_HASH=your_chainlink_key_hash
-   VITE_CONTRACT_ADDRESS=your_deployed_contract_address
+    ```sh
+   ALCHEMY_KEY=YOUR_ALCHEMY_KEY
+   PRIVATE_KEY=YOUR_PRIVATE_KEY
+   ETHER_SCAN_API_KEY=YOUR_ETHER_SCAN_API_KEY
+   SUBSCRIPTION_ID = YOUR_CHAIN_LINK_SUBSCRIPTION_ID
+   KEY_HASH=YOUR_CHAIN_LINK_KEY_HASH
+   VRF_COORDINATOR=YOUR_CHAIN_LINK_VRF_COORDINATOR
+   VRF_HANDLER_CONTRACT_ADDRESS= YOUR_DEPLOYED_VRF_HANDLER_CONTRACT_ADDRESS
+   VITE_CONTRACT_ADDRESS = YOUR_DICE_GAME_DEPLOYED_PROXY_ADDRESS
    ```
 
 
